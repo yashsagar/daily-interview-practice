@@ -13,7 +13,13 @@ export const updateDirectory = (updateData) => {
     if (tree === null) return null;
 
     const updateItems = () => {
-      return tree.items.map((item) => updateDir({ directory: item, id, info }));
+      const updatedTree = tree.items.map((item) =>
+        updateDir({ directory: item, id, info })
+      );
+      if (info.type === "delete") {
+        return updatedTree.filter((item) => item !== null);
+      }
+      return updatedTree;
     };
 
     switch (info.type) {
@@ -37,6 +43,7 @@ export const updateDirectory = (updateData) => {
         if (tree.id === id) {
           return null;
         }
+
         return { ...tree, items: updateItems() };
       }
 

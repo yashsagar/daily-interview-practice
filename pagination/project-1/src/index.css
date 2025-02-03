@@ -1,0 +1,50 @@
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item-wrapper {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nav-items {
+  aspect-ratio: 1/1;
+  height: 30px;
+  background-color: gray;
+  border-radius: 100%;
+  padding: 3px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-items:active {
+  background-color: rgba(128, 128, 128, 0.696);
+}
+
+.nav-items.active {
+  background-color: rgb(238, 168, 168);
+}
+
+.card-wrapper {
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-inline: 5px;
+}
+
+.card-wrapper h2 {
+  text-align: center;
+  width: 200px;
+}
+
+.card-wrapper img {
+  width: 200px;
+}
+
+.product-wrapper {
+  border: 1px solid black;
+}
